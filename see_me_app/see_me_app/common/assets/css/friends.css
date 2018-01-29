@@ -1,0 +1,80 @@
+/*friends.tmpl.html*/
+
+.white_content .div-img{
+	    border-radius: 85px;
+    float: left;
+    border-color: white;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 16%;
+    border-color: white;
+    /*background-image: url(common/assets/images/untitled1.jpg);*/
+}
+.black_overlay {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  /*background-color: black;*/
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+.white_content {
+    display: none;
+    position: absolute;
+    top: 16%;
+         left: 0;
+    right: 0;
+    width: 54%;
+    height: 39%;
+      margin: 0 auto;
+    width: 250px;
+    height: 252px;
+    padding: 0;
+    box-shadow: 1px 1px 5px #a3a2a2;
+    background-color: white;
+    z-index: 1002;
+    overflow: auto;
+}
+	.fa-search{
+		
+    position: absolute;
+    left: 8px;
+    font-size: 17px;
+     top: 0px; 
+    /* bottom: 0; */
+    /* margin: 0 auto; */
+    padding: 22px;
+	}
+	
+	.margin{
+		margin:9px;
+	}
+	#img-icon{
+		float:left;
+		border-color:white;
+		width: 78px;
+		height: 78px;
+		border-color: white
+	}
+	.friend{
+		
+    padding: 10px;
+    height: 95px;
+    width: 100%;
+    border-bottom: 0.5px solid #E8E9E9;
+	}
+	.friend span,label {
+		    line-height: 1;
+		color:#285668;
+		display: block;
+		
+	}

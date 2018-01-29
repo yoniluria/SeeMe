@@ -1,0 +1,160 @@
+<div class="bg-yellow" style="position: relative; height: 60px;    margin-top: 1vh;">
+	<center><input class="padding margin" placeholder="חפש איש קשר" style="    width: 90%;"/>
+	<i class="fa fa-search" aria-hidden="true"></i></center>
+</div>
+<div class=friends-container>
+<div href="javascript:void(0)" ng-repeat="friend in friends" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+	<div class="friend">
+    <center id="img-icon" class="div-img" style="float:left;border-color:white;width: 78px;height: 78px;border-color: white; background-image: url('common/assets/images/untitled1.jpg');">
+    </center>
+    <div style="    width: calc(100% - 90px);">
+		<span>8.13 | 24:1</span>
+		<label class="left">{{friend.name}}</label>
+		<span class="left">{{friend.thinking}}</span>
+		</div>
+	</div>
+</div>
+</div>
+<!--
+<div href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+	<div class="friend">
+    <center id="img-icon" class="div-img" style="float:left;border-color:white;width: 78px;height: 78px;border-color: white; background-image: url('images/untitled1.jpg');">
+    </center>
+    <div style="    width: calc(100% - 90px);">
+		<span>8.13 | 24:1</span>
+		<label class="left">Ronen Gross</label>
+		<span class="left">hi I`d like to see you :)</span>
+		</div>
+	</div>
+</div>
+<div href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+	<div class="friend">
+    <center id="img-icon" class="div-img" style="float:left;border-color:white;width: 78px;height: 78px;border-color: white; background-image: url('images/untitled1.jpg');">
+    </center>
+    <div style="    width: calc(100% - 90px);">
+		<span>8.13 | 24:1</span>
+		<label class="left">Ronen Gross</label>
+		<span class="left">hi I`d like to see you :)</span>
+		</div>
+	</div>
+</div>
+<div href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+	<div class="friend">
+    <center id="img-icon" class="div-img" style="float:left;border-color:white;width: 78px;height: 78px;border-color: white; background-image: url('images/untitled1.jpg');">
+    </center>
+    <div style="    width: calc(100% - 90px);">
+		<span>8.13 | 24:1</span>
+		<label class="left">Ronen Gross</label>
+		<span class="left">hi I`d like to see you :)</span>
+		</div>
+	</div>
+</div>
+<div href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+	<div class="friend">
+    <center id="img-icon" class="div-img" style="float:left;border-color:white;width: 78px;height: 78px;border-color: white; background-image: url('images/untitled1.jpg');">
+    </center>
+    <div style="    width: calc(100% - 90px);">
+		<span>8.13 | 24:1</span>
+		<label class="left">Ronen Gross</label>
+		<span class="left">hi I`d like to see you :)</span>
+		</div>
+	</div>
+</div>
+<div href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+	<div class="friend">
+    <center id="img-icon" class="div-img" style="float:left;border-color:white;width: 78px;height: 78px;border-color: white; background-image: url('images/untitled1.jpg');">
+    </center>
+    <div style="    width: calc(100% - 90px);">
+		<span>8.13 | 24:1</span>
+		<label class="left">Ronen Gross</label>
+		<span class="left">hi I`d like to see you :)</span>
+		</div>
+	</div>
+</div>-->
+
+
+
+  <div id="light" class="white_content">
+  	 
+    <a style="float: left" href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><img class="padding-10 absolute p-l p-t" src="common/assets/images/x_2.png" /></a>
+    <center id="img-icon" class="div-img" >
+    </center>
+    <img id="closefriend5" onclick="funcloseimgfriend(5)" class="padding-10 absolute p-r p-b" src="common/assets/images/003.png" />
+	<input type="number" value="1" id="text-if-show5" style="display: none;"/>
+	<img class="padding-10 absolute p-r p-l p-b" src="common/assets/images/002.png"/>
+	<img class="padding-10 absolute p-l p-b" src="common/assets/images/001.png" />
+  </div>
+  <div id="fade" class="black_overlay"></div>
+<style>
+.white_content .div-img{
+	    border-radius: 85px;
+    float: left;
+    border-color: white;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 16%;
+    border-color: white;
+    background-image: url(common/assets/images/untitled1.jpg);
+}
+.black_overlay {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  /*background-color: black;*/
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+.white_content {
+    display: none;
+    position: absolute;
+    top: 16%;
+         left: 0;
+    right: 0;
+    width: 54%;
+    height: 39%;
+      margin: 0 auto;
+    width: 250px;
+    height: 252px;
+    padding: 0;
+    box-shadow: 1px 1px 5px #a3a2a2;
+    background-color: white;
+    z-index: 1002;
+    overflow: auto;
+}
+	.fa-search{
+		
+    position: absolute;
+    left: 8px;
+    font-size: 17px;
+     top: 0px; 
+    /* bottom: 0; */
+    /* margin: 0 auto; */
+    padding: 22px;
+	}
+	
+	.margin{
+		margin:9px;
+	}
+	.friend{
+		
+    padding: 10px;
+    height: 95px;
+    width: 100%;
+    border-bottom: 0.5px solid #E8E9E9;
+	}
+	.friend span,label {
+		    line-height: 1;
+		color:#285668;
+		display: block;
+		
+	}
+</style>

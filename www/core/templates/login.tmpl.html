@@ -1,0 +1,73 @@
+<div id="div1">
+<img class="logo-img" src="common/assets/images/logo.png"/>
+<center class="login-facebook padding">
+<label class="white">התחבר באמצעות פייסבוק</label>
+<img id="facebook" class="logo-facebook" src="common/assets/images/f.png" ng-click="login()"/>
+</center>
+</div>
+
+<!-- <div id="div2" style="display: none;">
+<img class="logo-img" src="images/logo_2.png"/>
+<div class="big-div" style="background-color: #FCC95B">
+	<div class="small-div" style="background-color: white;border-radius: 2px"></div>
+</div>
+<center class="login-facebook padding" style="bottom: 240px;">
+<img id="facebook2" class="logo-facebook" src="images/f.png"/>
+</center>
+</div> -->
+
+<div id="div3" style="display: none;">
+<img class="logo-img" src="common/assets/images/logo.png"/>
+<div class="arrow-up"></div>
+<div class="big-div" style="background-color:white;text-align: center">
+	<center id="login-loading" class="login-facebook padding" style="bottom: 70px;">
+    <!-- <img id="" src="images/load.png"/> -->
+    <div class="loader"></div>
+     <label class="blue padding">טוען...</label>
+</center>
+<center id="login-load" class="login-facebook padding" style="display:none;bottom: 0">
+    <!-- <img id="" src="images/load.png"/> -->
+<center id="img-icon" class="div-img">
+    <center id="img-icon" ng-style="{'background-image': 'url('+user.imageProfil+')'}" class="div-img" style="border-color:white;width: 92px;height: 92px;bottom: -8px;border-color: white; ">
+    </center>
+</center>
+     <label class="blue padding">מחובר</label>
+</center>
+   
+</div>
+
+</div>
+
+
+
+<script>
+
+
+
+$('#facebook2').click(function () {
+	 $('body').css('background-image', 'url(images/back.png)');
+	document.getElementById('div2').style.display = "none";
+	document.getElementById('div3').style.display = "block";
+	
+});
+
+$('#img-icon').click(function () {
+
+	 window.location.href ="http://develop.sayyes.co.il/see-me/web/index.php?r=site%2Findex";//ttp://taxi-phone.co.il/see-me/web/index.php?r=site%2Findex";
+
+	
+});
+
+</script>
+<style>
+body {
+	font-family: 'Heebo', Arial, sans-serif;
+    font-size: 18px;
+    background-image: url("common/assets/images/back.png");
+	background-size: cover;    
+    background-attachment: fixed;
+    background-position: center;
+	background-repeat: no-repeat;
+}
+
+</style>

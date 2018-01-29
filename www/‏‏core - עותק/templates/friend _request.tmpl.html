@@ -1,0 +1,258 @@
+
+<div id="camera1" class="camera1">
+<dialog id="dialog" open><p class="padding">משתמש יקר אם הינך מעונין  <br> להציע חברות למשתמשים אחרים - <br>עליך להעלות תמונה</p>
+</dialog>
+<dialog id="dialogsend" style="display: none"; open><img src="common/assets/images/x.png" onclick="document.getElementById('dialogsend').style.display = 'none';document.getElementById('triangle').style.display = 'none';" />
+	<center><img class="send" src="common/assets/images/send.png" /> <button class="send" onclick="document.getElementById('camera1').style.display = 'none';document.getElementById('friends').style.display = 'table';">שלח תמונה</button></center>
+</dialog>
+<div  id="triangle" class="triangle"></div>
+<img id="img" src="" style="    position: absolute; width: 100%;top: 0; height: 100%;"/>
+<input style="display: none" id="imgInp" type="file" accept="image/*" capture="camera" onchange="angular.element(this).scope().uploadImage(event)"/>
+   <center class="upload">
+      <label  for="imgInp"><img  src="common/assets/images/camera.png" /> </label>
+    </center>	
+</div>
+<div style="overflow-x: scroll;    height: 60vh;">
+<div id="friends" style="display: none;">
+	<div style="display: table-cell">
+	<div class="boxfriend" onclick="funcshowimgfriend(1)">
+		<img src="common/assets/images/untitled1.jpg" />
+		<div id="imgfriend1" class="imgfriend">
+			<div class="padding">
+			<label>יוסי רוטמן</label>
+			<span>טקסט טקסט</span>
+			</div>
+			<img id="closefriend1" onclick="funcloseimgfriend(1)" class="padding-10 absolute p-r p-b" src="common/assets/images/3.png" />
+			<input type="number" value="1" id="text-if-show1" style="display: none;"/>
+			<img class="padding-10 absolute p-r p-l p-b" src="common/assets/images/2.png" />
+			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png" />
+		</div>
+	</div>
+	<div class="boxfriend" onclick="funcshowimgfriend(2)">
+		<img src="common/assets/images/untitled1.jpg" />
+		<div id="imgfriend2" class="imgfriend">
+			<div class="padding">
+			<label>יוסי רוטמן</label>
+			<span>טקסט טקסט</span>
+			</div>
+			<img id="closefriend2" onclick="funcloseimgfriend(2)" class="padding-10 absolute p-r p-b" src="common/assets/images/3.png" />
+			<input type="number" value="1" id="text-if-show2" style="display: none;"/>
+			<img class="padding-10 absolute p-r p-l p-b" src="common/assets/images/2.png" />
+			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png" />
+		</div>
+	</div>
+	<div class="boxfriend" onclick="funcshowimgfriend(3)">
+		<img src="common/assets/images/untitled1.jpg" />
+		<div id="imgfriend3" class="imgfriend">
+			<div class="padding">
+			<label>יוסי רוטמן</label>
+			<span>טקסט טקסט</span>
+			</div>
+			<img id="closefriend3" onclick="funcloseimgfriend(3)" class="padding-10 absolute p-r p-b" src="common/assets/images/3.png" />
+			<input type="number" value="1" id="text-if-show3" style="display: none;"/>
+			<img class="padding-10 absolute p-r p-l p-b" src="common/assets/images/2.png" />
+			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png" />
+		</div>
+	</div>
+	</div>
+	<div style="display: table-cell">
+	<div class="boxfriend" onclick="funcshowimgfriend(4)">
+		<img src="common/assets/images/untitled1.jpg" />
+		<div id="imgfriend4" class="imgfriend">
+			<div class="padding">
+			<label>יוסי רוטמן</label>
+			<span>טקסט טקסט</span>
+			</div>
+			<img id="closefriend4" onclick="funcloseimgfriend(4)" class="padding-10 absolute p-r p-b" src="common/assets/images/3.png" />
+			<input type="number" value="1" id="text-if-show4" style="display: none;"/>
+			<img class="padding-10 absolute p-r p-l p-b" src="common/assets/images/2.png" />
+			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png" />
+		</div>
+	</div>
+	<div class="boxfriend" onclick="funcshowimgfriend(5)">
+		<img src="common/assets/images/untitled1.jpg" />
+		<div id="imgfriend5" class="imgfriend">
+			<div class="padding">
+			<label>יוסי רוטמן</label>
+			<span>טקסט טקסט</span>
+			</div>
+			<img id="closefriend5" onclick="funcloseimgfriend(5)" class="padding-10 absolute p-r p-b" src="common/assets/images/3.png" />
+			<input type="number" value="1" id="text-if-show5" style="display: none;"/>
+			<img class="padding-10 absolute p-r p-l p-b" src="common/assets/images/2.png"  onclick="window.location='http://taxi-phone.co.il/see-me/web/index.php?r=site%2Fchat';"/>
+			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png" />
+		</div>
+	</div>
+	<div class="boxfriend" onclick="funcshowimgfriend(6)">
+		<img src="common/assets/images/untitled1.jpg" />
+		<div id="imgfriend6" class="imgfriend">
+			<div class="padding">
+			<label>יוסי רוטמן</label>
+			<span>טקסט טקסט</span>
+			</div>
+			<img id="closefriend6" onclick="funcloseimgfriend(6)" class="padding-10 absolute p-r p-b" src="common/assets/images/3.png" />
+			<input type="number" value="1" id="text-if-show6" style="display: none;"/>
+			<img class="padding-10 absolute p-r p-l p-b" src="common/assets/images/2.png" />
+			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png" />
+		</div>
+	</div>
+	</div>
+	<div style="display: table-cell">
+	<div class="boxfriend" onclick="funcshowimgfriend(7)">
+		<img src="common/assets/images/untitled1.jpg" />
+		<div id="imgfriend7" class="imgfriend">
+			<div class="padding">
+			<label>יוסי רוטמן</label>
+			<span>טקסט טקסט</span>
+			</div>
+			<img id="closefriend7" onclick="funcloseimgfriend(7)" class="padding-10 absolute p-r p-b" src="common/assets/images/3.png" />
+			<input type="number" value="1" id="text-if-show7" style="display: none;"/>
+			<img class="padding-10 absolute p-r p-l p-b" src="common/assets/images/2.png" />
+			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png" />
+		</div>
+	</div>
+	<div class="boxfriend" onclick="funcshowimgfriend(8)">
+		<img src="common/assets/images/untitled1.jpg" />
+		<div id="imgfriend8" class="imgfriend">
+			<div class="padding">
+			<label>יוסי רוטמן</label>
+			<span>טקסט טקסט</span>
+			</div>
+			<img id="closefriend8" onclick="funcloseimgfriend(8)" class="padding-10 absolute p-r p-b" src="common/assets/images/3.png" />
+			<input type="number" value="1" id="text-if-show8" style="display: none;"/>
+			<img class="padding-10 absolute p-r p-l p-b" src="common/assets/images/2.png" />
+			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png" />
+		</div>
+	</div>
+	<div class="boxfriend" onclick="funcshowimgfriend(9)">
+		<img src="common/assets/images/untitled1.jpg" />
+		<div id="imgfriend9" class="imgfriend">
+			<div class="padding">
+			<label>יוסי רוטמן</label>
+			<span>טקסט טקסט</span>
+			</div>
+			<img id="closefriend9" onclick="funcloseimgfriend(9)" class="padding-10 absolute p-r p-b" src="common/assets/images/3.png" />
+			<input type="number" value="1" id="text-if-show9" style="display: none;"/>
+			<img class="padding-10 absolute p-r p-l p-b" src="common/assets/images/2.png" />
+			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png" />
+		</div>
+	</div>
+	</div>
+	<div style="display: table-cell">
+	<div class="boxfriend" onclick="funcshowimgfriend(10)">
+		<img src="common/assets/images/untitled1.jpg" />
+		<div id="imgfriend10" class="imgfriend">
+			<div class="padding">
+			<label>יוסי רוטמן</label>
+			<span>טקסט טקסט</span>
+			</div>
+			<img id="closefriend10" onclick="funcloseimgfriend(10)" class="padding-10 absolute p-r p-b" src="common/assets/images/3.png" />
+			<input type="number" value="1" id="text-if-show10" style="display: none;"/>
+			<img class="padding-10 absolute p-r p-l p-b" src="common/assets/images/2.png" />
+			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png" />
+		</div>
+	</div>
+	<div class="boxfriend" onclick="funcshowimgfriend(11)">
+		<img src="common/assets/images/untitled1.jpg" />
+		<div id="imgfriend11" class="imgfriend">
+			<div class="padding">
+			<label>יוסי רוטמן</label>
+			<span>טקסט טקסט</span>
+			</div>
+			<img id="closefriend11" onclick="funcloseimgfriend(11)" class="padding-10 absolute p-r p-b" src="common/assets/images/3.png" />
+			<input type="number" value="1" id="text-if-show11" style="display: none;"/>
+			<img class="padding-10 absolute p-r p-l p-b" src="common/assets/images/2.png" />
+			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png" />
+		</div>
+	</div>
+	<div class="boxfriend" onclick="funcshowimgfriend(12)">
+		<img src="common/assets/images/untitled1.jpg" />
+		<div id="imgfriend12" class="imgfriend">
+			<div class="padding">
+			<label>יוסי רוטמן</label>
+			<span>טקסט טקסט</span>
+			</div>
+			<img id="closefriend12" onclick="funcloseimgfriend(12)" class="padding-10 absolute p-r p-b" src="common/assets/images/3.png" />
+			<input type="number" value="1" id="text-if-show12" style="display: none;"/>
+			<img class="padding-10 absolute p-r p-l p-b" src="common/assets/images/2.png" />
+			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png" />
+		</div>
+	</div>
+	</div>
+</div>
+</div>
+<div style="position: absolute;bottom: 0">	
+<!-- <img src="common/assets/images/camera.png" /> -->
+<center style="position: absolute; top: 0; right: 0;left: 0;"><i id="close" data-toggle="collapse" data-target="#demo" onclick="funcclick('close')" class="fa fa-angle-down" aria-hidden="true" style="font-size: 30px;display: none"></i></center>
+<div  id="demo" class="accordion-body collapse">
+<img style="width: 100%; height: calc(35vh - 60px); border-top: 3px solid white;" src="common/assets/images/maps.PNG"/>
+</div>
+</div>
+<center><i id="open" data-toggle="collapse" data-target="#demo" onclick="funcclick('open')"  class="fa fa-angle-up" aria-hidden="true" style="font-size: 30px;position: absolute;bottom: 0;right: 0;left: 0"></i></center>
+<script>
+ $( document ).ready(function() {
+ 	if (window.location.href.indexOf("friends") > -1) { 
+ 		document.getElementById('camera1').style.display = 'none';
+ 		document.getElementById('friends').style.display = 'table';
+ 		}
+ });
+
+// $( ".boxfriend" ).click(function() {
+   // document.getElementById('imgfriend').style.display = "block";
+// });
+function funcshowimgfriend (id) {
+	if(document.getElementById('text-if-show'+id).value==0){
+	   document.getElementById('imgfriend'+id).style.display = 'none';	
+	   document.getElementById('text-if-show'+id).value =1 ;
+	}else{
+	   
+	   document.getElementById('imgfriend'+id).style.display = 'block';
+	  }
+}
+function funcloseimgfriend (id) {
+   document.getElementById('imgfriend'+id).style.display = "none";
+   document.getElementById('text-if-show'+id).value = 0;
+}
+	function readURL(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#img').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+    document.getElementById('dialogsend').style.display = "block";
+     document.getElementById('triangle').style.display = "block";
+}
+
+$("#imgInp").change(function(){
+	document.getElementById('dialog').style.display = "none";    
+    readURL(this);
+     
+     // window.setTimeout(function(){
+//     
+//       
+ // }, 2000);
+  // $('#dialogsend').dialog();
+});
+
+function funcclick (id) {
+	if(id=='open'){
+		 document.getElementById(id).style.display = "none";  
+         document.getElementById('close').style.display = "block";
+	}else{
+		 document.getElementById('open').style.display = "block";  
+ 		 document.getElementById('close').style.display = "none";
+	}
+
+}
+
+</script>
+
+
+<style>
+
+
+</style>

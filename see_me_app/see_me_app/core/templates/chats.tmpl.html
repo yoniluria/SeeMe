@@ -1,0 +1,157 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="../see_me_app/common/assets/js/fancywebsocket.js"></script>
+<script></script>
+
+<div class="col-md-12">
+	<div id="chats-div" class="col-md-10" style="position: relative;">
+		<h3>23.5</h3>
+		<!-- <div class="chat">
+		<div class="inline">
+		<span class="f-left">16:24|13.08</span>
+		<span class="text-chat">טקסט טקסט טקסט טקסט</span>
+		</div>
+		<div class="chat-img">
+		<img src="../see_me_app/common/assets/images/untitled1.jpg" />
+		</div>
+		</div>
+		<div class="chat right">
+		<div class="inline">
+		<span class="f-left">16:24|13.08</span>
+		<span class="text-chat">טקסט טקסט טקסט טקסט</span>
+		</div>
+		<div class="chat-img">
+		<img src="../see_me_app/common/assets/images/untitled1.jpg" />
+		</div>
+		</div>
+		<div class="chat">
+		<div class="inline" style="width: 100%;">
+		<span class="f-left">16:24|13.08</span>
+		<span class="text-chat">טקסט טקסט טקסט טקסט</span>
+		</div>
+		</div>
+		<div class="chat">
+		<div class="inline" style="width: 100%;">
+		<span class="f-left">16:24|13.08</span>
+		<span class="text-chat">טקסט טקסט טקסט טקסט</span>
+		</div>
+		</div>
+		<div class="chat">
+		<div class="inline" style="width: 100%;">
+		<span class="f-left">16:24|13.08</span>
+		<span class="text-chat">טקסט טקסט טקסט טקסט</span>
+		</div>
+		</div>
+		<div class="chat right">
+		<div class="inline" style="width: 100%;">
+		<span class="f-left">16:24|13.08</span>
+		<span class="text-chat">טקסט טקסט טקסט טקסט</span>
+		</div>
+		</div> -->
+
+	</div>
+
+</div>
+<div style="clear: both;"></div>
+<div class="box-img" style="height: 32px; overflow-x:auto; overflow-y:hidden;  position: relative">
+	<div style="display: table-cell; ">
+		<img src="../see_me_app/common/assets/images/01.png" />
+	</div>
+	<div style="display: table-cell">
+		<img src="../see_me_app/common/assets/images/02.png" />
+	</div>
+	<div style="display: table-cell">
+		<img src="../see_me_app/common/assets/images/03.png" />
+	</div>
+	<div style="display: table-cell">
+		<img src="../see_me_app/common/assets/images/04.png" />
+	</div>
+	<div style="display: table-cell">
+		<img src="../see_me_app/common/assets/images/05.png" />
+	</div>
+	<div style="display: table-cell">
+		<img src="../see_me_app/common/assets/images/06.png" />
+	</div>
+	<div style="display: table-cell">
+		<img src="../see_me_app/common/assets/images/07.png" />
+	</div>
+	<div style="display: table-cell">
+		<img src="../see_me_app/common/assets/images/08.png" />
+	</div>
+	<div style="display: table-cell">
+		<img src="../see_me_app/common/assets/images/01.png" />
+	</div>
+	<div style="display: table-cell">
+		<img src="../see_me_app/common/assets/images/02.png" />
+	</div>
+	<div style="display: table-cell">
+		<img src="../see_me_app/common/assets/images/03.png" />
+	</div>
+</div>
+ 
+<footer>
+	<div style="">
+		<button class="btnhand"><img style="width: 30px;" src="../see_me_app/common/assets/images/hand.png" />
+		</button>
+		<!-- <textarea id='log' name='log' readonly='readonly'></textarea> -->
+
+		<!-- <input type="text"  name='message' required  list="comments" /> -->
+		<span id='message' name='message' required  list="comments" contenteditable="true"> </span>
+		<datalist id="comments">
+			<option disabled> בחר תגובה </option>
+			<option > בוקר טוב </option>
+			<option > שלום </option>
+		</datalist>
+	</div>
+</footer>
+
+<style>
+	[contenteditable] {
+		-webkit-appearance: textfield;
+		appearance: textfield padding : 10px;
+		color: #285668;
+		border-radius: 3px;
+		height: 40px !important;
+		border: 0px;
+		width: 80%;
+		font-family: 'Heebo', Arial, sans-serif;
+		/* color: white; */
+		font-weight: normal;
+		background-color: white;
+		-webkit-appearance: textfield;
+		background-color: white;
+		-webkit-rtl-ordering: logical;
+		user-select: text;
+		cursor: auto;
+		padding: 10px 10px;
+	}
+	::-webkit-scrollbar {
+		display: none;
+	}
+	.chat {
+		margin-bottom: 15px;
+		background-color: white;
+		border-radius: 5px;
+		float: left;
+		box-shadow: 1px 0px 1px 0px #bfbfbf;
+		height: 65px;
+		width: 75%;
+	}
+	.chat-img {
+		width: 20% border-radius : 5px 0px 0px 5px;
+		overflow: hidden;
+		height: 100%;
+		width: 55px;
+		float: left;
+		position: relative;
+	}
+	.chat img {
+		border-radius: 5px 0px 0px 5px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	body {
+		background-color: #F6F7F7;
+	}
+</style>

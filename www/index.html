@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html  ng-app="appSeeme">
+   
+<head>
+	 
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="common/assets/js/jquery.min.js"></script>
+		<script src="common/assets/js/bootstrap.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="common/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="common/assets/css/bootstrap-rtl.css">
+		<link rel="stylesheet" href="common/assets/css/style.css">
+		<!-- <link rel="stylesheet" href="assets/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="common/assets/fonts/Heebo-ExtraBold.ttf">
+		<link rel="stylesheet" href="common/assets/fonts/Heebo-Bold.ttf">
+		<link rel="stylesheet" href="common/assets/fonts/Heebo-Black.ttf">
+		<link rel="stylesheet" href="common/assets/fonts/Heebo-Light.ttf">
+		<link rel="stylesheet" href="common/assets/fonts/Heebo-Medium.ttf">
+		<link rel="stylesheet" href="common/assets/fonts/Heebo-Regular.ttf">
+		<link rel="stylesheet" href="common/assets/fonts/Heebo-Thin.ttf">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<title>{{title}}</title>
+		<!-- <link rel="stylesheet" href="assets/css/scrollbar.css"> -->  
+</head>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+       <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+      <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="common/assets/js/jquery.min.js"></script>
+		<script src="common/assets/js/bootstrap.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="common/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="common/assets/css/bootstrap-rtl.css">
+		<link rel="stylesheet" href="common/assets/css/style.css">
+		<!-- <link rel="stylesheet" href="assets/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="common/assets/fonts/Heebo-ExtraBold.ttf">
+		<link rel="stylesheet" href="common/assets/fonts/Heebo-Bold.ttf">
+		<link rel="stylesheet" href="common/assets/fonts/Heebo-Black.ttf">
+		<link rel="stylesheet" href="common/assets/fonts/Heebo-Light.ttf">
+		<link rel="stylesheet" href="common/assets/fonts/Heebo-Medium.ttf">
+		<link rel="stylesheet" href="common/assets/fonts/Heebo-Regular.ttf">
+		<link rel="stylesheet" href="common/assets/fonts/Heebo-Thin.ttf">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<title>{{title}}</title>
+
+ 
+    <style>
+        /* following two viewport lines are equivalent to meta viewport statement above, and is needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+        /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+    </style>
+
+    <!-- See explanation at the bottom of this file for info regarding placement of JS libraries. -->
+    <!-- These library references (below) are just examples to give you the general idea... -->
+    <!-- <script src="lib/mc/hammer.js"></script> -->
+    <!-- <script src="lib/ft/fastclick.js"></script> -->
+    <!-- <script src="lib/jq/jquery.js"></script> -->
+
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+
+<body>
+   	<header>
+
+<!-- <nav class="navbar navbar-inverse">
+  <div class="container-fluid wrap_div col-md-10">
+    <ul class="nav navbar-nav"> 
+      <li><a class="<?= strcmp(Yii::$app->controller->action->id,'friends')== 0?'select':'black'?>" href="index.php?r=site%2Ffriends">חברים</a></li>
+      <li><a class="<?= strcmp(Yii::$app->controller->action->id,'interested')== 0?'select':'black'?>"  href="index.php?r=site%2Finterested">מתעניינים</a></li>     
+     </ul>
+  </div>
+</nav>  -->
+<div class="navbar navbar-inverse navbar-fixed-top" style=" box-shadow: 1px 1px 5px #a3a2a2;">
+  <div class="container">
+    <div class="navbar-header nav navbar-nav">
+      <button type="button" onclick="openNav()" class="navbar-toggle">    	
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+      <div style="display: inline-flex; margin-top: 8px;">
+      <div style="display: -webkit-inline-box;position: relative;">
+      	<div class="mountfriend">3</div>
+      	<img style="width: 38px;    margin-right: 10px;" src="common/assets/images/hand_2.png" />
+
+      	<label style="margin: 15px 0;"><span>{{friendsLen||0}}</span> חברים</label> 
+      </div>
+      
+      <div style="display: -webkit-inline-box;">
+      	<img style="width: 38px;    margin-right: 10px;" src="common/assets/images/hand.png" />
+
+      	<label style="margin: 15px 0;"><span></span> מתעניינים</label> 
+      </div>
+   </div>
+    </div>
+      <ul id="mySidenav" class="sidenav nav">
+        <li ng-click="routeTo('#/friend_request')">הצעת חברות</li>
+        <li ng-click="routeTo('#/friends')">חברים</li>
+        <li ng-click="routeTo('#/visitors')">מתעניינים</li>
+        <li ng-click="routeTo('#/profile')">פרופיל אישי</li>
+      </ul>
+  </div>
+</div>
+
+
+<div class="container"></div>
+  
+  <div class="text-center">
+
+
+	</header>
+	<div ng-view class="view-all"></div>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-o3L_q43B50buvhupnXA1KeeFF5XWveU&language=he"></script>
+    <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+    <!-- Place your remote debugging weinre script URL here, if it does not work below. -->
+
+    <!-- See <head> section above for additional JS libraries loaded as part of this application. -->
+
+    <!-- "Phantom" cordova.js required for projects that use Cordova plugins. -->
+    <script src="cordova.js"></script>
+
+    <!-- for your event code, see README and file comments for details -->
+    <script src="js/app.js"></script>
+    <!-- for your init code, see README and file comments for details -->
+   <!-- <script src="js/init-app.js"></script>-->
+    <!-- normalizes device and document ready events, see file for details -->
+<!--    <script src="xdk/init-dev.js"></script>-->
+
+    <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+    <!-- Place your remote debugging weinre script URL here, if it does not work above. -->
+    <script src="common/assets/js/angular.js"></script>
+  <script src="common/assets/js/angular-facebook.js"></script>
+  <script src="common/assets/js/angular-animate.min.js"></script>
+  <script src="common/assets/js/angular-route.min.js"></script>
+  <script src="common/assets/js/angular-ui-router.min.js"></script>
+  <script src="common/assets/js/ui-bootstrap.min.js"></script>
+  <script src="common/assets/js/jquery-ui.js"></script>
+  <script src="common/assets/js/angular-ui.min.js"></script>
+
+    <script src="https://cdn.rawgit.com/driftyco/ng-cordova/master/dist/ng-cordova.min.js"></script>
+    <script src="https://cdn.rawgit.com/nraboy/ng-cordova-oauth/master/dist/ng-cordova-oauth.min.js"></script>
+
+	<script src="app.mdl.js"></script>   
+	
+    <script src="app.route.js"></script>
+	<script src="core/templates_js/friends.ctrl.js"></script>
+	<script src="core/templates_js/friend_request.ctrl.js"></script>
+	<script src="core/templates_js/profile.ctrl.js"></script>
+	<script src="core/templates_js/visitors.ctrl.js"></script>
+	<script src="core/templates_js/chats.ctrl.js"></script>
+	<script src="core/templates_js/login.ctrl.js"></script>
+	 <script src="common/services/connectPOSTService.js"></script>
+  <script src="common/services/connectGETService.js"></script>
+	
+
+</body>
+
+
+
+</html>
+<script>
+function openNav() {
+	if(document.getElementById("mySidenav").style.width=="0px"){
+		document.getElementById("mySidenav").style.width = "200px";
+	}
+	else{
+		document.getElementById("mySidenav").style.width = "0";
+	}
+    
+}
+
+function closeNav() {
+    
+}
+</script>
+<style>
+.nav>li>a:hover, .nav>li>a:focus {
+    text-decoration: none;
+    background-color: rgba(79, 112, 125, 0.79);
+}
+.sidenav { 
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 62px;
+    left: 0;
+    background-color: rgba(42, 86, 104, 0.92);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+   .navbar-inverse .navbar-nav>li>a{
+	color: white;
+}
+.sidenav li {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.mountfriend{
+	
+    position: absolute;
+    top: -1px;
+    right: 31px;
+    margin: 0 auto;
+    height: 15px;
+    width: 15px;
+    font-size: 12px;
+    color: #2A5668;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    border: 0.1px solid #FDDA54;
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+     background-color: white; 
+}
+.navbar-inverse .navbar-toggle {
+     border-color: white; 
+}
+	.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #285668;
+}
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 16px;
+    /* line-height: 10px; */
+    padding: 0;
+}
+</style>
