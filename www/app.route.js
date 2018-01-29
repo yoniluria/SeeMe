@@ -28,7 +28,6 @@
            .when('/chats', {
 	            controller: 'chatsCtrl',
 	            templateUrl: 'core/templates/chats.tmpl.html'
-
            }).
 		when('/chats/:chatterId', {
        templateUrl: 'core/templates/chats.tmpl.html',

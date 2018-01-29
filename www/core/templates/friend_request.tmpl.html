@@ -1,61 +1,3 @@
-<<<<<<< HEAD
-<div  id="camera1" class="camera1" ng-init='load()'>	
-<dialog id="dialog" open>
-	<p class="padding">משתמש יקר אם הינך מעונין  <br> להציע חברות למשתמשים אחרים - <br>עליך להעלות תמונה</p>
-</dialog>
-<dialog id="dialogsend" style="display: none"; open><img src="{{imagesUrl}}x.png" onclick="document.getElementById('dialogsend').style.display = 'none';document.getElementById('triangle').style.display = 'none';" />
-	<center><img class="send" src="{{imagesUrl}}send.png" /> 
-		<button class="send"  id='sendForUploading'>
-			שלח תמונה
-			</button>
-	</center>
-</dialog>
-<div  id="triangle" class="triangle"></div>
-<img id="img"  style="position: absolute; width: 100%;top: 0; height: 100%;"/>
-<input  ng-model='src' style="display: none;" id="imgInp" type="file" accept="image/*" capture="camera" />
-   <center class="upload">
-      <label  for="imgInp"><img  src="{{imagesUrl}}camera.png" />
-      	 </label>
-    </center>	
-</div>
-<div style="overflow-x: scroll;height: 60vh;">
-<div ng-repeat="visitor in visitors" style="display: none;">
-	<div style="display: table-cell">
-	<div class="boxfriend" onclick="funcshowimgfriend(1)">
-		<img src="common/assets/images/{{visitor.imageCamera}}" />
-		<div id="imgfriend1" class="imgfriend">
-			<div class="padding">
-			<label>{{visitor.name}}</label>
-			<span>{{visitor.thinking}}</span>
-			</div>
-			<img id="closefriend1" onclick="funcloseimgfriend(1)" class="padding-10 absolute p-r p-b" src="{{imagesUrl}}3.png" />
-			<input type="number" value="1" id="text-if-show1" style="display: none;"/>
-			<img class="padding-10 absolute p-r p-l p-b" src="{{imagesUrl}}2.png" />
-			<img class="padding-10 absolute p-l p-b" src="{{imagesUrl}}1.png" />
-		</div>
-	</div>
-	
-	</div>
-</div>
-</div>
-<div style="position: absolute;bottom: 0">	
-<!-- <img src="common/assets/images/camera.png" /> -->
-<center style="position: absolute; top: 0; right: 0;left: 0;"><i id="close" data-toggle="collapse" data-target="#demo" onclick="funcclick('close')" class="fa fa-angle-down" aria-hidden="true" style="font-size: 30px;display: none"></i></center>
-<div  id="demo" class="accordion-body collapse">
-<img style="width: 100%; height: calc(35vh - 60px); border-top: 3px solid white;" src="{{imagesUrl}}maps.PNG"/>
-</div>
-</div>
-<center><i id="open" data-toggle="collapse" data-target="#demo" onclick="funcclick('open')"  class="fa fa-angle-up" aria-hidden="true" style="font-size: 30px;position: absolute;bottom: 0;right: 0;left: 0"></i></center>
-<script>
- 
-
-</script>
-
-
-<style>
-
-
-=======
 <div  id="camera1" class="camera1" ng-init='load()'>	
 <dialog id="dialog" open>
 	<p class="padding">משתמש יקר אם הינך מעונין  <br> להציע חברות למשתמשים אחרים - <br>עליך להעלות תמונה</p>
@@ -112,5 +54,4 @@
 <style>
 
 
->>>>>>> e58bfe4819680486797335230cee1349a27ab8c5
 </style>

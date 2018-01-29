@@ -97,14 +97,15 @@
       <div style="display: -webkit-inline-box;position: relative;">
       	<div class="mountfriend">3</div>
       	<img style="width: 38px;    margin-right: 10px;" src="common/assets/images/hand_2.png" />
-
-      	<label style="margin: 15px 0;"><span>{{friendsLen||0}}</span> חברים</label> 
+      	<label style="margin: 15px 0;"><span>{{friendsLen|dinamicVal:friends}}</span> חברים</label> 
       </div>
       
       <div style="display: -webkit-inline-box;">
       	<img style="width: 38px;    margin-right: 10px;" src="common/assets/images/hand.png" />
-
-      	<label style="margin: 15px 0;"><span></span> מתעניינים</label> 
+      	<label style="margin: 15px 0;">
+			<span>
+				{{visitorsLen|dinamicVal:visitors}}
+			</span> מתעניינים</label> 
       </div>
    </div>
     </div>

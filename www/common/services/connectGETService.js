@@ -9,7 +9,6 @@
      
      return {fn:function(url) {
      		var token=localStorage.getItem("token");
-
 		 if(!token||isNaN(token))
 			 token='12345';
 	        return dataStorage =  	$http.get($rootScope.url+url,{

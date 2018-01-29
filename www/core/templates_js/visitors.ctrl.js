@@ -8,30 +8,15 @@ $scope.controller='friends';});
 
 
 
-angular
+var app=angular
     .module('appSeeme.visitors', [])
-    .controller("visitorsCtrl", function($scope,$rootScope, $http, $location,$window,connectGETService,connectPOSTService) {
+    .controller("visitorsCtrl", function($scope,$rootScope, $http, $location,$window,connectGETService,connectPOSTService,$filter) {
 $scope.controller='friends';
   var geolocationTry_i = 0; 
      $scope.dbLat=0;
     $scope.dbLng=0;
  $scope.lng;
     $scope.lat;
-/*<<<<<<< HEAD
-    
-    
-    
-    
-    
-$scope.getLocation=function () { 
-    if (navigator.geolocation) {
-        var options = {
-
-                enableHighAccuracy: true,
-
-                 timeout: 15000,
-
-=======*/
     $rootScope.addToFriends=function(id)
 	{debugger;
 		console.log('id to be a friend='+ id);
@@ -149,20 +134,12 @@ $scope.addMarker=function (location) {
             map:$scope.map
         });
     }
-/*
-<<<<<<< HEAD
-$scope.getAllFriends=function(){
-	connectGETService.fn($scope.controller + '/getallusers' ).then(function(data) {
-				console.log("get friends");	console.log(data.data);
-        		$scope.friends=data.data;
-        angular.forEach($scope.friends,function(friend){
-=======
-*/
 
 $scope.getAllFriends=function(){
 	connectGETService.fn($scope.controller + '/getallusers' ).then(function(data) {
 				console.log("get friends");	console.log(data.data);
         		$scope.visitors=data.data;
+		$rootScope.visitorsLen=$scope.visitors.length;
         angular.forEach($scope.visitors,function(friend){
 			       friend.toggle=true;
             var location={lat:parseFloat(friend.lat),lng:parseFloat(friend.lng)};
@@ -172,7 +149,6 @@ $scope.getAllFriends=function(){
 								}, function(e) {
 								});    
 }
-
 $scope. funcshowimgfriend=function (id) {
 	debugger;
 	var val=parseInt(angular.element($('#text-if-show'+id)).val());
@@ -227,3 +203,12 @@ $scope.init = function() {
                
                
 } );
+
+app.filter('dinamicVal',function(){
+	return function (myVal,DepandOn){
+		if (angular.isDefined(DepandOn))
+			return $scope[DepandOn].length||$rootScope[DepandOn].length;
+		return myVal;
+			
+	}
+});
