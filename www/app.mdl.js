@@ -1,4 +1,5 @@
-(function () {
+
+var applic=(function () {
     'use strict';
     angular.module('appSeeme.friends', []);
     angular.module('appSeeme.login', []);
@@ -21,7 +22,7 @@
     'appSeeme.services',
     ])
     
-    .run(['$rootScope','$location','$window','$http','$route','$cordovaOauth','connectGETService','connectPOSTService', function ($rootScope,$location,$window,$http,$route,$cordovaOauth, connectGETService,connectPOSTService) {
+    .run(['$rootScope','$location','$window','$http','$route','$cordovaOauth','connectGETService','connectPOSTService','$filter', function ($rootScope,$location,$window,$http,$route,$cordovaOauth, connectGETService,connectPOSTService,$filter) {
         window.cordovaOauth = $cordovaOauth;
         window.http = $http;
 		$rootScope.appUrl='http://develop.sayyes.co.il/see_me_app/#/';
@@ -98,6 +99,7 @@
 			
 			
 		}
+	
     $rootScope.displayData=function ($http, access_token)
 	        {  $http.get("https://graph.facebook.com/v2.2/me", {params: {access_token: access_token ,fields: "id,about,age_range,picture,birthday,context,email    ,short_name,first_name,last_name,gender,hometown,link,location,middle_name,name,timezone,website,work", format: "json" }}).then(function(result) {
              
@@ -133,3 +135,10 @@
     }]);
     
 })();
+
+//applic.filter('optimitize',	function (){
+//	return function (is,replaceTo){
+//		return is==undefined?replaceTo:is;
+//	}
+//	});
+	

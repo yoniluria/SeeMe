@@ -38,7 +38,7 @@ $scope.getFriends=function(){
                  for (var i=0; i < $scope.friends.length; i++) {
 					 if($scope.friends[i].date&&typeof  $scope.friends[i].date=='string'){
 						   $scope.friends[i].date=new Date($scope.friends[i].date);
-					 
+				         	$scope.friends[i].thinking=!$scope.friends[i].thinking?'':$scope.friends[i].thinking;
 					 console.log( $scope.friends[i].date+'   \n');
 					 }
                  

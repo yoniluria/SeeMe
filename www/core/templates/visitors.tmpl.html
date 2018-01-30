@@ -7,7 +7,7 @@
 		<div class="boxfriend asTable" ng-click="visitor.toggle=!visitor.toggle" ng-repeat="visitor in visitors" >
 		<img src="common/assets/images/{{visitor.imageCamera}}" ng-show="visitor.toggle" />
 
-		<div id="imgfriend{{visitor.id}}" ng-show="!visitor.toggle" style="background-color:blue;" >
+		<div id="imgfriend{{visitor.id}}" ng-show="!visitor.toggle"  class="imgfriend" >
 			<div class="padding">
 			<label>{{visitor.name}}</label>
 			<span>{{visitor.thinking}}</span>
@@ -15,7 +15,7 @@
 			<img id="closefriend{{visitor.id}}" ng-click="visitor.toggle=!visitor.toggle" class="padding-10 absolute p-r p-b" src="common/assets/images/3.png" />
 			<input type="number" value="0" id="text-if-show{{visitor.id}}" style="display: none;"/>
 <!--			<img class="padding-10 absolute p-r p-l p-b" src="common/assets/images/2.png" />-->
-			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png"   style="cursor:pointer;"  ng-click="addToFriends(visitor.id)"/>
+			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png"   style="cursor:pointer;"  ng-click="addToFriends(visitor.uId)"/>
 		</div>
 <!--</div>-->
 		</div>
@@ -99,7 +99,7 @@ function funcclick (id) {
 <style>
 	.asTable{
 		color:white;
-		background-color:blue;
+/*		background-color:blue;*/
 		width: 31%;
     margin: 1px;
     float: right;
