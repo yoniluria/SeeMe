@@ -18,7 +18,7 @@ $scope.controller='friends';
  $scope.lng;
     $scope.lat;
     $rootScope.addToFriends=function(id)
-	{debugger;
+	{
 		console.log('id to be a friend='+ id);
 		   connectGETService.fn( 'friends/add_friend&my_area_user='+id ).then(function(data) {
                     console.log(data.data);
@@ -155,14 +155,14 @@ $scope.getAllFriends=function(){
 								});    
 }
 $scope. funcshowimgfriend=function (id) {
-	debugger;
+
 	var val=parseInt(angular.element($('#text-if-show'+id)).val());
     !val?angular.element($('#imgfriend'+id)).hide():angular.element($('#imgfriend'+id)).show();
      angular.element($('#text-if-show'+id)).val(!val);
 	
 }
 $scope.funcloseimgfriend =function(id) {
-	debugger;
+
 	angular.element($('#imgfriend'+id)).hide();
     angular.element($('#text-if-show'+id)).val(0);
 }
@@ -211,7 +211,7 @@ $scope.init = function() {
 
 app.filter('dinamicVal',function(){
 	return function (myVal,DepandOn){
-		return myVal==undefined?DepandOn:myVal.length;
+		return !myVal?DepandOn:myVal.length;
 //		if (angular.isDefined(DepandOn))
 //			return $scope[DepandOn].length||$rootScope[DepandOn].length;
 //		return myVal;

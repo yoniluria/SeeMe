@@ -17,7 +17,7 @@ $scope.init = function() {
 		}();
 });*/
 
-angular
+var a=angular
     .module('appSeeme.friends', [])
     .controller("friendsCtrl", function($scope,$rootScope, $http, $location,$window,connectGETService) {
             $scope.controller='friends';
@@ -27,7 +27,7 @@ $scope.getFriends=function(){
                 connectGETService.fn($scope.controller + '/getallfriends' ).then(function(data) {
                     console.log(data.data.friends);
                      $rootScope.friends=data.data.friends;
-					debugger;
+				
 
 				if(!$scope.friends)
 					{
@@ -70,3 +70,12 @@ $scope.setToggle=function(friend,index){
 
 });
 
+a.filter('dinamicVal',function(){
+	return function (myVal,DepandOn){
+		return !myVal?DepandOn:myVal.length;
+//		if (angular.isDefined(DepandOn))
+//			return $scope[DepandOn].length||$rootScope[DepandOn].length;
+//		return myVal;
+			
+	}
+});
