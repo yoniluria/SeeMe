@@ -25,7 +25,7 @@
 		<div id="imgfriend1" class="imgfriend">
 			<div class="padding">
 			<label>{{visitor.name}}</label>
-			<span>{{visitor.thinking}}</span>
+			<span>{{visitor.thinking|optimitize:''}}</span>
 			</div>
 			<img id="closefriend1" onclick="funcloseimgfriend(1)" class="padding-10 absolute p-r p-b" src="{{imagesUrl}}3.png" />
 			<input type="number" value="1" id="text-if-show1" style="display: none;"/>

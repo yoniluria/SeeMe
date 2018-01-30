@@ -142,6 +142,7 @@ $scope.getAllFriends=function(){
 		$rootScope.visitorsLen=$scope.visitors.length;
         angular.forEach($scope.visitors,function(friend){
 			       friend.toggle=true;
+			friend.thinking=!friend.thinking?'':friend.thinking;
             var location={lat:parseFloat(friend.lat),lng:parseFloat(friend.lng)};
 				$scope.addMarker(angular.fromJson(location));
 			});
@@ -206,9 +207,10 @@ $scope.init = function() {
 
 app.filter('dinamicVal',function(){
 	return function (myVal,DepandOn){
-		if (angular.isDefined(DepandOn))
-			return $scope[DepandOn].length||$rootScope[DepandOn].length;
-		return myVal;
+		return myVal==undefined?DepandOn:myVal.length;
+//		if (angular.isDefined(DepandOn))
+//			return $scope[DepandOn].length||$rootScope[DepandOn].length;
+//		return myVal;
 			
 	}
 });

@@ -1,4 +1,5 @@
-(function () {
+
+var applic=(function () {
     'use strict';
     angular.module('appSeeme.friends', []);
     angular.module('appSeeme.login', []);
@@ -20,9 +21,8 @@
     'appSeeme.profile',
     'appSeeme.services',
     ])
-    
 
-    .run(['$rootScope','$location','$window','$http','$route','$cordovaOauth','connectGETService','connectPOSTService', function ($rootScope,$location,$window,$http,$route,$cordovaOauth, connectGETService,connectPOSTService) {
+    .run(['$rootScope','$location','$window','$http','$route','$cordovaOauth','connectGETService','connectPOSTService','$filter', function ($rootScope,$location,$window,$http,$route,$cordovaOauth, connectGETService,connectPOSTService,$filter) {
         window.cordovaOauth = $cordovaOauth;
         window.http = $http;
             $rootScope.displayData=function ($http, access_token)
@@ -125,7 +125,15 @@
 			
 		}
 
+
 	
     }]);
     
 })();
+
+//applic.filter('optimitize',	function (){
+//	return function (is,replaceTo){
+//		return is==undefined?replaceTo:is;
+//	}
+//	});
+	
