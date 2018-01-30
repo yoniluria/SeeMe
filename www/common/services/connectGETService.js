@@ -12,7 +12,8 @@
 		 if(!token||isNaN(token))
 			 token='12345';
 	        return dataStorage =  	$http.get($rootScope.url+url,{
-   												 headers: {'TOKEN': token}
+   												 headers: {'TOKEN': token},
+				                                 withCredentials: true
 									})
 	                         		.then(function (response) {
 	              							return response;

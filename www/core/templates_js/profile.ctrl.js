@@ -9,7 +9,8 @@ $scope.controller='friends';
 		$scope.inserted=false;
         console.log($rootScope.user);
  $rootScope.setMSG=function(msg){
-	 
+	 if($rootScope.user.thinking)
+		 msg=$rootScope.user.thinking;
      connectGETService.fn($scope.controller + '/save_profile&msg='+msg).then(function(data) {
                     console.log(data.data);
                     if(data.data=='true'){

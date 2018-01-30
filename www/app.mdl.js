@@ -26,7 +26,7 @@ var applic=(function () {
         window.cordovaOauth = $cordovaOauth;
         window.http = $http;
 		$rootScope.appUrl='http://develop.sayyes.co.il/see_me_app/#/';
-		$rootScope.imageUrl='http://develop.sayyes.co.il/see_me_app/common/assets/images/';
+		$rootScope.imageUrl='';//'http://develop.sayyes.co.il/see_me_app/common/assets/images/';
 		$rootScope.url = "http://develop.sayyes.co.il/see-me/web/index.php?r=";
         var token=localStorage.getItem("token");
         if(!token){
@@ -50,9 +50,8 @@ var applic=(function () {
                                 });
                 
 }
-        
-        
-        
+	
+      
        $rootScope.getVarsLen();
          var connectme=localStorage.getItem("token");
              if(!connectme)

@@ -25,7 +25,8 @@ $scope.controller='friends';
 			   if(data.data=='success')
 				 {
 				 $rootScope.friends.push(JSON.parse(data.data.friend));
-			       $scope.apply();
+					 	$rootScope.friendsLen++;
+			    
 					 $rootScope.routeTo('#/friends');
 				 }
 			   if(data.data.data=='already exists')
@@ -33,6 +34,8 @@ $scope.controller='friends';
 					   console.log('chatter!');
 					  $rootScope.routeTo('#/chats/'+id);  
 				   }
+			    //  $scope.apply();
+				
 		   }, function(e) {
                                 });
 	}
@@ -134,6 +137,7 @@ $scope.addMarker=function (location) {
             map:$scope.map
         });
     }
+
 
 $scope.getAllFriends=function(){
 	connectGETService.fn($scope.controller + '/getallusers' ).then(function(data) {

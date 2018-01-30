@@ -43,7 +43,7 @@ $scope.getFriends=function(){
 					 }
                  
                  }  
-                      $scope.$apply();         
+                      //$scope.$apply();         
                                 }, function(e) {
                                 });
                 
@@ -59,7 +59,7 @@ $scope.setToggle=function(friend,index){
     $scope.toggleOpen=!$scope.toggleOpen;
     if(friend!=undefined){
 	$scope.currFriend=friend;
-    $scope.imageCenter=friend.imageCamera;
+    $scope.imageCenter=friend.imageProfil;
 	}
     // if(index!=undefined)
     // $scope.topObj.top=$scope.topCenter*(index+1);
