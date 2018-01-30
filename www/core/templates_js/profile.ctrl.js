@@ -8,11 +8,6 @@ var app= angular
 $scope.controller='friends';
         console.log($rootScope.user);
  $rootScope.setMSG=function(msg){
-/*<<<<<<< HEAD
-     connectGETService.fn($scope.controller + '/save_profile&msg='+msg).then(function(data) {
-                    console.log(data.data);
-                    if(data.data=='true')
-=======*/
 	    if($scope.myProfile&&$scope.myProfile!='')
 			msg=$scope.myProfile;
      connectGETService.fn($scope.controller + '/save_profile&msg='+msg).then(function(data) {

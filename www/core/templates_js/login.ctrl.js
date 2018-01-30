@@ -1,8 +1,5 @@
 angular
     .module('appSeeme.login', [])
-/*<<<<<<< HEAD
-    .controller("loginCtrl", function($scope,$rootScope, $http, $location,$window,connectPOSTService) {
-=======*/
     .controller("loginCtrl", function($scope,$rootScope, $http, $location,$window,connectPOSTService,$cordovaOauth){
 $scope.controller='site';
 
@@ -62,7 +59,7 @@ $scope.controller='site';
 					console.log(data.data);
                     
                         $rootScope.user=data.data;
-
+                         console.log('i in !');
                      console.log($scope.user);
                      document.getElementById('login-loading').style.display = "none";
                      document.getElementById('login-load').style.display = "block";
