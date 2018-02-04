@@ -64,7 +64,8 @@
 	
 </h3>
 <label class="gray" style="    line-height: 3;">על מה אתה חושב?</label>
-<input ng-model="user.thinking" style="width: 100%;height: 20px !important;     border-bottom: 1px solid #696669;" ng-style="{'border-bottom-color':inputColor}"  on-enter-key />
+<input ng-model="user.thinking" style="width: 100%;height: 20px !important;    border-bottom: 1px solid #696669;" ng-style="{'border-bottom-color':inputColor}"  on-enter-key 
+	   ng-change="setMSG()"  />
 <!--	//-->
 
 </div>

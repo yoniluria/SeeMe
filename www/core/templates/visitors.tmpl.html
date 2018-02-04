@@ -1,37 +1,41 @@
 
-
+<div ng-show="!visitors.length">
+	<h3 style="color: #a94e47; margin-top: 10%;margin-right: 10%;"
+   >לא נמצאו מתענינים בסביבה .<a ng-click="getAllFriends()" style="cursor:pointer;">מצא כעת</a></h3>
+	
+</div>
 <div style="overflow-x: scroll;    height: 60vh;">
 <div id="friends" >
 <!--	<div style="display: table-cell">-->
 	<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png"  />
-		<div class="boxfriend asTable" ng-click="visitor.toggle=!visitor.toggle" ng-repeat="visitor in visitors" >
-		<img src="common/assets/images/{{visitor.imageCamera}}" ng-show="visitor.toggle" />
-
-		<div id="imgfriend{{visitor.id}}" ng-show="!visitor.toggle"  class="imgfriend" >
-			<div class="padding">
-			<label>{{visitor.name}}</label>
+		<div class="boxfriend asTable" ng-click="visitor.toggle=!visitor.toggle " ng-repeat="visitor in visitors" >
+		<img src="{{visitor.imageProfil}}" ng-show="visitor.toggle" />
+            <!--ng-show="!visitor.toggle"-->
+		<div id="imgfriend{{visitor.id}}" ng-hide="visitor.toggle"  class="imgfriend" style="display:block" >
+			<div class="padding" style="color:white">
+			<label style="color:white">{{visitor.name}}</label>
 			<span>{{visitor.thinking}}</span>
 			</div>
-			<img id="closefriend{{visitor.id}}" ng-click="visitor.toggle=!visitor.toggle" class="padding-10 absolute p-r p-b" src="common/assets/images/3.png" />
+			<img id="closefriend{{visitor.id}}" ng-click="visitor.toggle=false" style="cursor:pointer" class="padding-10 absolute p-r p-b" src="common/assets/images/3.png" />
 			<input type="number" value="0" id="text-if-show{{visitor.id}}" style="display: none;"/>
 <!--			<img class="padding-10 absolute p-r p-l p-b" src="common/assets/images/2.png" />-->
-			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png"   style="cursor:pointer;"  ng-click="addToFriends(visitor.uId)"/>
+			<img class="padding-10 absolute p-l p-b" src="common/assets/images/1.png"   style="cursor:pointer;"  ng-click="addToFriends(visitor.id)"/>
 		</div>
 <!--</div>-->
 		</div>
 	</div>
 	
 </div>
-<div id="map" style="width:400px;height:400px"></div>
-<div style="position: absolute;bottom: 0">
+<div id="map" style="width: 100%; height: calc(35vh - 18px); border-top: 3px solid white;"></div>
+<!--<div style="position: absolute;bottom: 0">
 	
-<!-- <img src="common/assets/images/camera.png" /> -->
+ <img src="common/assets/images/camera.png" /> 
 <center style="position: absolute; top: 0; right: 0;left: 0;"><i id="close" data-toggle="collapse" data-target="#demo" onclick="funcclick('close')" class="fa fa-angle-down" aria-hidden="true" style="font-size: 30px;display: none"></i></center>
 <div  id="demo" class="accordion-body collapse">
-<img style="width: 100%; height: calc(35vh - 60px); border-top: 3px solid white;" src="common/assets/images/maps.PNG"/>
+
 </div>
 </div>
-<center><i id="open" data-toggle="collapse" data-target="#demo" onclick="funcclick('open')"  class="fa fa-angle-up" aria-hidden="true" style="font-size: 30px;position: absolute;bottom: 0;right: 0;left: 0"></i></center>
+<center><i id="open" data-toggle="collapse" data-target="#demo" onclick="funcclick('open')"  class="fa fa-angle-up" aria-hidden="true" style="font-size: 30px;position: absolute;bottom: 0;right: 0;left: 0"></i></center>-->
 <script>
  $( document ).ready(function() {
  	if (window.location.href.indexOf("friends") > -1) { 

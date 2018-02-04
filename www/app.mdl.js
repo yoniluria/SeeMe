@@ -10,7 +10,6 @@ angular.module('appSeeme.profile', []);
 angular.module('appSeeme.services', []);
 angular.module('appSeeme', [
 'ngRoute',
-
 'ngCordova', 
 'ngCordovaOauth',
 'appSeeme.friends',
@@ -80,7 +79,6 @@ document.getElementById('login-load').style.display = "block";
 }
 
 
-
    $rootScope.getFriendsLen(); 
      var connectme=localStorage.getItem("token");
          if(!connectme)
@@ -113,22 +111,26 @@ document.getElementById('login-load').style.display = "block";
   })
         return false;
     }
-    $rootScope.deleteUser=function(id){
-    console.log(id+' koll');
-                   connectGETService.fn('users/delete_user&user_id='+id).then(function(data) {
-                        console.log(data.data);
-                          if(data.data!='false') {
-                             var $index= $rootScope.findById(id,$rootScope.friends);
-                             if(!isNaN($index))
-                              $rootScope.friends.splice($index,1);    
-                              console.log($index+' i deleted him..');
-                          }
-
-                            }, function(e) {
-                            });
-
-
-    }
+    
+    		$rootScope.deleteUser=function(id){
+		console.log(id+' koll');
+            var user_id=$rootScope.user?$rootScope.user.id:1;
+				       connectGETService.fn('users/delete_user&user_id='+id+'&freind_id='+user_id).then(function(data) {
+                            console.log(data.data);
+                              if(data.data!='false') {
+								 var $index= $rootScope.findById(id,$rootScope.friends);
+						         if(!isNaN($index))
+								  $rootScope.friends.splice($index,1);    
+								  console.log($index+' i deleted him..');
+							  }
+								
+                                }, function(e) {
+                                });
+			
+			
+		}
+    
+    
 
 
 

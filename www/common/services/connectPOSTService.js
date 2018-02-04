@@ -7,9 +7,14 @@
      var dataStorage;//storage for cache
     
      return {fn:function(url,data) {
-     	 	var token=localStorage.getItem("token");
+     	 var token=localStorage.getItem("token");
+		 if(!token){
+             token='12345';
+         }
+			 
 	        return dataStorage =  	$http.post($rootScope.url+url,data,{
-   												 headers: {'TOKEN': token}
+   												 headers: {'TOKEN': token},
+				                                 withCredentials: true
 									})
 			                         .then(function (response) {
 							              return response;
