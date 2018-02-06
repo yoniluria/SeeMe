@@ -27,6 +27,7 @@ angular.module('appSeeme.chats', []).controller("chatsCtrl", function($scope, $r
 		var id,dat;
 		if($routeParams.chatterId)
 	     id=$routeParams.chatterId;
+        else  return;
 		       connectGETService.fn($scope.controller + '/getallchatsuniqe&friendId='+id ).then(function(data) {
 				   try	{
             dat=JSON.parse(data.data);

@@ -14,18 +14,19 @@ var app=angular
 		console.log('id to be a friend='+ id);
 		   connectGETService.fn( 'friends/add_friend&my_area_user='+id ).then(function(data) {
                     console.log(data.data);
-			   if(data.data=='success')
+			   if(data.data.data=='success')
 				 {
 				 $rootScope.friends.push(JSON.parse(data.data.friend));
-					 	$rootScope.friendsLen++;
-			    
-					 $rootScope.routeTo('#/friends');
+                 $rootScope.friendsLen++;
+                $rootScope.routeTo('#/chats');
 				 }
-			   if(data.data.data=='already exists')
+			   else if(data.data.data=='already exists')
 				   {
 					   console.log('chatter!');
-					  $rootScope.routeTo('#/chats/'+id);  
+                     $rootScope.routeTo('#/chats/'+id);  
+					 
 				   }
+               
 			    //  $scope.apply();
 				
 		   }, function(e) {
@@ -56,13 +57,13 @@ $scope.getLocation=function () {
                 $scope.saveLocation();
                 //}
                 $scope.curruntLocation={lat:$scope.lat,lng:$scope.lng};
-                 if(!marker){
+                 if(!marker&&$rootScope.user){
                      marker = $scope.addMarker($scope.curruntLocation,$rootScope.user.name,$rootScope.user.imageProfil);
                  }
                  else{
                      marker.setPosition($scope.curruntLocation);
                  }
-                  $scope.getAllFriends();
+                //  $scope.getAllFriends();
                     
                   }, function () {
 
@@ -174,7 +175,7 @@ $scope.getAllFriends=function(){
     }, function(e) {
     });    
 }
-
+$scope.getAllFriends();
 $scope. funcshowimgfriend=function (id) {
 
 	var val=parseInt(angular.element($('#text-if-show'+id)).val());

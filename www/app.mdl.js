@@ -102,6 +102,7 @@ document.getElementById('login-load').style.display = "block";
         document.getElementById("mySidenav").style.width = "0";
     }
     $rootScope.findById=function(id,arr){
+        debugger;
         var i=0;
         $.grep(arr, function(b){
             if(b.id==id)
@@ -113,15 +114,17 @@ document.getElementById('login-load').style.display = "block";
     }
     
     		$rootScope.deleteUser=function(id){
-		console.log(id+' koll');
+		
             var user_id=$rootScope.user?$rootScope.user.id:1;
 				       connectGETService.fn('users/delete_user&user_id='+id+'&freind_id='+user_id).then(function(data) {
                             console.log(data.data);
                               if(data.data!='false') {
-								 var $index= $rootScope.findById(id,$rootScope.friends);
-						         if(!isNaN($index))
-								  $rootScope.friends.splice($index,1);    
-								  console.log($index+' i deleted him..');
+                                  $rootScope.getFriends();
+//								 var $index= $rootScope.findById(id,$rootScope.friends);
+//						         if(!isNaN($index))
+//								  $rootScope.friends.splice($index,1);    
+//                                    $rootScope.friendsLen>0? $rootScope.friendsLen--:0;
+//								  console.log($index+' i deleted him..');
 							  }
 								
                                 }, function(e) {

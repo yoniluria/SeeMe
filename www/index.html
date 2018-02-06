@@ -96,7 +96,7 @@
       <div style="display: inline-flex; margin-top: 8px;">
           <div ng-click="logOut()"><i class="fa fa-sign-out" style="color: #285668"></i></div>
       <div style="display: -webkit-inline-box;position: relative;">
-      	<div class="mountfriend">3</div>
+      	<div class="mountfriend">{{friends|dinamicVal:friendsLen}}</div>
       	<img style="width: 38px;    margin-right: 10px;" src="common/assets/images/hand_2.png" />
       	<label style="margin: 15px 0;"><span>{{friends|dinamicVal:friendsLen}}</span> חברים</label> 
       </div>
@@ -112,7 +112,7 @@
         
     </div>
       <ul id="mySidenav" class="sidenav nav">
-        <li ng-click="routeTo('#/friend_request')">הצעת חברות</li>
+<!--        <li ng-click="routeTo('#/friend_request')">הצעת חברות</li>-->
         <li ng-click="routeTo('#/friends')">חברים</li>
         <li ng-click="routeTo('#/visitors')">מתעניינים</li>
         <li ng-click="routeTo('#/profile')">פרופיל אישי</li>

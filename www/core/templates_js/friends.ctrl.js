@@ -23,7 +23,7 @@ var a=angular
             $scope.controller='friends';
    
 	
-$scope.getFriends=function(){   
+$rootScope.getFriends=function(){   
                 connectGETService.fn($scope.controller + '/getallfriends' ).then(function(data) {
                     console.log(data.data.friends);
                      $rootScope.friends=data.data.friends;
@@ -49,7 +49,7 @@ $scope.getFriends=function(){
                 
 }
 
-$scope.getFriends();
+$rootScope.getFriends();
 $scope.toggleOpen=false;
 $scope.topCenter=88;
 $scope.topObj={
